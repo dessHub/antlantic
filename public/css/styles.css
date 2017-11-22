@@ -1,0 +1,53 @@
+body {
+ overflow-x: hidden;
+ padding-bottom: 40px;
+  }
+
+.navbar {
+  background-color: #f0ad4e;
+  margin-bottom: 0px;
+
+}
+
+ .navbar-nav li a {
+   color: red;
+ }
+
+.slide {
+  position: relative;
+  height: 65vh;
+}
+
+.top {
+  padding: 2px;
+  margin-left: 85px;
+
+}
+
+.carousel-caption {
+  align-content: center;
+  padding-bottom: 240px;
+}
+
+#myCarousel {
+  margin-bottom: 20px;
+}
+
+.item-front {
+  height : 410px;
+  border: inset;
+  background-color: black;
+
+}
+
+.item-front .item-cont {
+  background-color: white;
+}
+
+.item-bottom {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+}
