@@ -87,6 +87,22 @@
         </nav>
 
         @yield('content')
+
+        <div class="footer">
+          <div class="container">
+           <div class="raw">
+             <div class="col-md-4 col-xs-12">
+               <div class="footer-contacts">
+                 <div class=""><h2>Contact Us</h2></div>
+               <h4><i class="fa fa-phone"></i> +254792746432</h4>
+               <h4><i class="fa fa-envelope-o success"></i> info@atlantichomez.com</h4>
+             </div>
+              </div>
+             <div class="col-md-4 col-xs-12"></div>
+             <div class="col-md-4 col-xs-12"></div>
+           </div>
+          </div>
+        </div>
     </div>
 
     <!-- Scripts -->

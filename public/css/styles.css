@@ -3,20 +3,6 @@ body {
  padding-bottom: 40px;
   }
 
-.navbar {
-  background-color: #f0ad4e;
-  margin-bottom: 0px;
-
-}
-
- .navbar-nav li a {
-   color: red;
- }
-
-.slide {
-  position: relative;
-  height: 65vh;
-}
 
 .top {
   padding: 2px;
@@ -24,19 +10,28 @@ body {
 
 }
 
-.carousel-caption {
-  align-content: center;
-  padding-bottom: 240px;
-}
-
-#myCarousel {
-  margin-bottom: 20px;
+@media only screen and (min-width : 481px) {
+    .flex-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flex-row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-row.row:after,
+    .flex-row.row:before {
+        display: flex;
+    }
 }
 
 .item-front {
-  height : 410px;
   border: inset;
   background-color: black;
+  margin-bottom: 10px;
+}
+
+.col-md-6 .item-front {
 
 }
 
@@ -50,4 +45,19 @@ body {
   padding-bottom: 0px;
   margin-bottom: 0px;
   align-items: center;
+}
+
+.front-contact {
+  border-style: outset;
+}
+
+.front-contact .head {
+  background-color: #f0ad4e;
+  padding :5px;
+  text-align: center;
+}
+
+.form-contact form {
+  padding: 20px;
+  margin: 10px;
 }
