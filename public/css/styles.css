@@ -26,7 +26,6 @@ body {
 }
 
 .item-front {
-  border: inset;
   background-color: black;
   margin-bottom: 10px;
 }
@@ -45,10 +44,6 @@ body {
   padding-bottom: 0px;
   margin-bottom: 0px;
   align-items: center;
-}
-
-.front-contact {
-  border-style: outset;
 }
 
 .front-contact .head {

@@ -3,6 +3,10 @@
   padding: 10px;
 }
 
+.footer-header {
+  color : white;
+}
+
 .banner {
   height: 40vh;
   margin-top : -21px;
@@ -25,8 +29,16 @@
   }
 }
 
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .home-title {
-  margin-top: 90px;
+  margin-top: auto;
   color : #fff;
 }
 
@@ -39,6 +51,46 @@
 
 
 .home-search {
-  margin-bottom: -1px;
-  background-color: white;
+  margin-top: 10px;
+  background-color: #000;
+}
+
+.selectwidthauto
+{
+     width:100% !important;
+}
+
+.search-well {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.front-contact {
+  border-style: outset;
+}
+
+.front-img {
+  span {
+    top:6%;
+    margin-top: -25px;
+    position: absolute;
+    background-color:#000;
+    color : white;
+  }
+
+}
+
+.fa {
+  color : skyblue;
+}
+
+.item-cont {
+  h6 {
+    color : green;
+  }
+}
+
+.property-search {
+  margin-top: 2px;
+  margin-bottom: 20px;
 }

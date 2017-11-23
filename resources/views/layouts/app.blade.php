@@ -57,9 +57,38 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    APARTMENTS/HOUSES <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu sub-menu">
+                                <li><a href="{{ route('homes.index') }}" >HOMES FOR SALE</a></li>
+                                <li><a href="{{ route('homes.index') }}">HPMES FOR RENT</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    COTTAGES/HOLIDAY HOMES <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu sub-menu">
+                                <li><a href="{{ route('login') }}" >COTTAGES FOR SALE</a></li>
+                                <li><a href="{{ route('register') }}">COTTAGES FOR RENT</a></li>
+                                </ul>
+                            </li>
                         @guest
-                            <li><a href="{{ route('login') }}" >Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    Account <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu sub-menu">
+                                <li><a href="{{ route('login') }}" >Login</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
+                                </ul>
+                            </li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -93,13 +122,25 @@
            <div class="raw">
              <div class="col-md-4 col-xs-12">
                <div class="footer-contacts">
-                 <div class=""><h2>Contact Us</h2></div>
-               <h4><i class="fa fa-phone"></i> +254792746432</h4>
-               <h4><i class="fa fa-envelope-o success"></i> info@atlantichomez.com</h4>
-             </div>
+                 <div class="footer-header"><h2>Contact Us</h2></div>
+               <p><i class="fa fa-phone"></i> +254792746432</p>
+               <p><i class="fa fa-envelope-o success"></i> info@atlantichomez.com</p>
+               </div>
               </div>
-             <div class="col-md-4 col-xs-12"></div>
-             <div class="col-md-4 col-xs-12"></div>
+             <div class="col-md-4 col-xs-12">
+               <div class="footer-about">
+                 <div class="footer-header"><h2>About Atlantichomez</h2></div>
+               <p>Atlantichomez is an all-in-one real estate site that gives you the local scoop about homes for sale, apartments for rent, neighborhood insights, and real estate markets and trends to help you figure out exactly what, where, and when to buy, sell or rent. You can also find a real estate agent, view prices of recently sold homes, and see home values in your community. </p>
+               </div>
+             </div>
+             <div class="col-md-4 col-xs-12">
+               <div class="footer-contacts">
+                 <div class="footer-header"><h2>Explore Atlantichomez</h2></div>
+               <p><i class="fa fa-facebook"></i> Facebook</p>
+               <p><i class="fa fa-twitter"></i> Twitter</p>
+               <p><i class="fa fa-instagram"></i> Instagram</p>
+               </div>
+             </div>
            </div>
           </div>
         </div>
