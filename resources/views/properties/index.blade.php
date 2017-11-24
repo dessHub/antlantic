@@ -46,13 +46,18 @@
          <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
          <h4><strong>3 Bed Apertment</strong></h4>
          <h6>KES. 70,000</h6>
-         <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-       </div>
          <div class="item-bottom">
           <span><i class="fa fa-bed"></i>3</span>
           <span><i class="fa fa-car"></i>2</span>
           <span><i class="fa fa-shower"></i>1</span>
          </div>
+         <p>5th street</p>
+         <div class="" style="margin-bottom: 15px;">
+         <span>Nyali</span>
+         <span class="pull-right" style="margin-bottom:15px;"><a href="{{ route('homes.show',1)}}"><button class="btn btn-success">View</button></a></span>
+       </div>
+       </div>
+
 
         </div>
 
@@ -67,13 +72,17 @@
            <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
            <h4><strong>3 Bed Apertment</strong></h4>
            <h6>KES. 70,000</h6>
-           <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-         </div>
            <div class="item-bottom">
             <span><i class="fa fa-bed"></i>3</span>
             <span><i class="fa fa-car"></i>2</span>
             <span><i class="fa fa-shower"></i>1</span>
            </div>
+           <p>5th street</p>
+           <div class="" style="margin-bottom: 15px;">
+           <span>Nyali</span>
+           <span class="pull-right" style="margin-bottom:15px;"><a href="#"><button class="btn btn-success">View</button></a></span>
+         </div>
+         </div>
 
           </div>
 
@@ -88,13 +97,17 @@
            <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
            <h4><strong>3 Bed Apertment</strong></h4>
            <h6>KES. 70,000</h6>
-           <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-         </div>
            <div class="item-bottom">
             <span><i class="fa fa-bed"></i>3</span>
             <span><i class="fa fa-car"></i>2</span>
             <span><i class="fa fa-shower"></i>1</span>
            </div>
+           <p>5th street</p>
+           <div class="" style="margin-bottom: 15px;">
+           <span>Nyali</span>
+           <span class="pull-right" style="margin-bottom:15px;"><a href="#"><button class="btn btn-success">View</button></a></span>
+         </div>
+         </div>
 
           </div>
 
@@ -109,13 +122,17 @@
              <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
              <h4><strong>3 Bed Apertment</strong></h4>
              <h6>KES. 70,000</h6>
-             <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-           </div>
              <div class="item-bottom">
               <span><i class="fa fa-bed"></i>3</span>
               <span><i class="fa fa-car"></i>2</span>
               <span><i class="fa fa-shower"></i>1</span>
              </div>
+             <p>5th street</p>
+             <div class="" style="margin-bottom: 15px;">
+             <span>Nyali</span>
+             <span class="pull-right" style="margin-bottom:15px;"><a href="#"><button class="btn btn-success">View</button></a></span>
+           </div>
+           </div>
 
             </div>
 
@@ -130,13 +147,17 @@
              <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
              <h4><strong>3 Bed Apertment</strong></h4>
              <h6>KES. 70,000</h6>
-             <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-           </div>
              <div class="item-bottom">
               <span><i class="fa fa-bed"></i>3</span>
               <span><i class="fa fa-car"></i>2</span>
               <span><i class="fa fa-shower"></i>1</span>
              </div>
+             <p>5th street</p>
+             <div class="" style="margin-bottom: 15px;">
+             <span>Nyali</span>
+             <span class="pull-right" style="margin-bottom:15px;"><a href="#"><button class="btn btn-success">View</button></a></span>
+           </div>
+           </div>
 
             </div>
 
@@ -151,13 +172,17 @@
              <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
              <h4><strong>3 Bed Apertment</strong></h4>
              <h6>KES. 70,000</h6>
-             <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-           </div>
              <div class="item-bottom">
               <span><i class="fa fa-bed"></i>3</span>
               <span><i class="fa fa-car"></i>2</span>
               <span><i class="fa fa-shower"></i>1</span>
              </div>
+             <p>5th street</p>
+             <div class="" style="margin-bottom: 15px;">
+             <span>Nyali</span>
+             <span class="pull-right" style="margin-bottom:15px;"><a href="#"><button class="btn btn-success">View</button></a></span>
+           </div>
+           </div>
 
             </div>
 

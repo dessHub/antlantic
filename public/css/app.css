@@ -8353,6 +8353,7 @@ button.close {
 .footer {
   background-color: #000;
   padding: 10px;
+  margin: 20px;
 }
 
 .footer-header {
@@ -8434,5 +8435,47 @@ button.close {
 .property-search {
   margin-top: 2px;
   margin-bottom: 20px;
+}
+
+.property-details {
+  background-color: #ffffff;
+}
+
+.property-details .title {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.property-details .content {
+  font-style: normal;
+  font-family: fantasy;
+  font-weight: lighter;
+  padding: auto 10px;
+}
+
+.property-img span {
+  background-color: #E8F5E9;
+  margin: 1px;
+  text-align: center;
+}
+
+.property-img .price {
+  background-color: #000;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  font-style: oblique;
+  font-family: sans-serif;
+}
+
+.callery {
+  margin: 15px auto;
+}
+
+.callery .pageheader {
+  padding-top: 20px;
+  margin: 10px auto;
 }
 
