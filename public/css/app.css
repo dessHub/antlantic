@@ -8350,6 +8350,11 @@ button.close {
   }
 }
 
+body {
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
 .footer {
   background-color: #000;
   padding: 10px;
@@ -8363,6 +8368,11 @@ button.close {
 .banner {
   height: 40vh;
   margin-top: -21px;
+}
+
+.top {
+  padding: 2px;
+  margin-left: 85px;
 }
 
 .navbar-brand {
@@ -8388,6 +8398,36 @@ button.close {
 .home-title {
   margin-top: auto;
   color: #fff;
+}
+
+.item-front {
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.item-front .item-cont {
+  background-color: white;
+}
+
+.item-bottom {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.front-contact .head {
+  background-color: #f0ad4e;
+  padding: 5px;
+  text-align: center;
+}
+
+.form-contact form {
+  padding: 20px;
+  margin: 10px;
 }
 
 .banner-menus {
@@ -8474,8 +8514,13 @@ button.close {
   margin: 15px auto;
 }
 
-.callery .pageheader {
+.callery .page-header {
   padding-top: 20px;
   margin: 10px auto;
+}
+
+.property-contact {
+  background-color: #fff;
+  padding: 20px;
 }
 

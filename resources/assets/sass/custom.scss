@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
 .footer {
   background-color: #000;
   padding: 10px;
@@ -13,6 +18,11 @@
   margin-top : -21px;
 }
 
+.top {
+  padding: 2px;
+  margin-left: 85px;
+
+}
 
   .navbar-brand {
       margin: 10px 5px!important;
@@ -34,14 +44,48 @@
   visibility: visible;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover {
+  .dropdown-menu{
   display: block;
+ }
 }
 
 .home-title {
   margin-top: auto;
   color : #fff;
 }
+
+.item-front {
+  background-color: black;
+  margin-bottom: 10px;
+  .item-cont {
+    background-color: white;
+  }
+}
+
+.item-bottom {
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.front-contact {
+  .head {
+  background-color: #f0ad4e;
+  padding :5px;
+  text-align: center;
+ }
+}
+
+.form-contact {
+   form{
+   padding: 20px;
+   margin: 10px;
+ }
+}
+
 
 .banner-menus {
   margin:10px;
@@ -133,8 +177,13 @@
 .callery {
  margin : 15px auto;
 
- .pageheader {
+ .page-header {
    padding-top: 20px;
    margin: 10px auto;
  }
+}
+
+.property-contact {
+  background-color: #fff;
+  padding: 20px;
 }
