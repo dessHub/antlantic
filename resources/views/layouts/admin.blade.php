@@ -11,19 +11,14 @@
     <title>{{ config('app.name', 'Atlantichomez') }}</title>
 
     <!-- Styles -->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <!-- include summernote css/js-->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
 </head>
 <body>
-    <div id="app">
+    <div id="admin">
       <div class="" style="">
       <div class="row" style="background-color: #000000;">
 
@@ -71,12 +66,6 @@
                                 <ul class="dropdown-menu sub-menu">
                                 <li><a href="{{ route('homes.index') }}" >HOMES FOR SALE</a></li>
                                 <li><a href="{{ route('homes.index') }}">HPMES FOR RENT</a></li>
-                                @guest
-                                @else
-                                    @if( Auth::user()->role == "Admin")
-                                     <li><a href="{{ route('homes.create') }}">ADD HOME</a></li>
-                                     @endif
-                                @endguest
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -156,17 +145,8 @@
           </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function() {
-         $('#summernote').summernote({
-               height: 300,
-          });
-       });
-    </script>
+
     <!-- Scripts -->
-
-
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
-
 </html>

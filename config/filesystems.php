@@ -57,10 +57,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_KEY'),
-            'secret' => env('AWS_SECRET'),
-            'region' => env('AWS_REGION'),
-            'bucket' => env('AWS_BUCKET'),
+            'key' => 'AKIAIBE33SYHZ2F5U2EQ',
+            'secret' => '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',
+            'region' => 'eu-west-1',
+            'bucket' => 'nzuri',
         ],
 
     ],

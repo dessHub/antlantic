@@ -187,3 +187,14 @@ body {
   background-color: #fff;
   padding: 20px;
 }
+
+.property-form {
+  background-color: white;
+  padding: 20px;
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+  .col-md-12 {
+    margin : 5px;
+  }
+}

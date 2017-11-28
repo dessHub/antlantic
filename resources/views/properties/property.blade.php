@@ -6,25 +6,32 @@
  <div class="row">
   <div class="col-md-12 col-xs-12">
     <div class="col-md-8 col-xs-12" >
-      <div class="page-header" style="margin-top:-10px;"><h3>Property Page</h3></div>
+      <div class="page-header" style="margin-top:-10px;"><h3>Propert Details</h3></div>
     <div class="col-md-6 col-xs-12">
      <div class="property-img text-center">
-      <img class="img-responsive thumbnail" src="/images/pic3.jpg" alt="Property Image">
-      <span><i class="fa fa-bed"></i> 3</span>
-      <span><i class="fa fa-car"></i> 2</span>
-      <span><i class="fa fa-shower"></i> 1</span>
-       <div class="price"><h4>KES. 70,000 /Month</h4></div>
+      <img class="img-responsive thumbnail" src="https://s3.eu-west-1.amazonaws.com/nzuri{{$property->image}}" alt="Property Image">
+      <span><i class="fa fa-bed"></i> {{$property->bed}}</span>
+      <span><i class="fa fa-car"></i> {{$property->parking}}</span>
+      <span><i class="fa fa-shower"></i> {{$property->bath}}</span>
+       <div class="price"><h4>KES. {{$property->price}} /Month</h4></div>
      </div>
+    @guest
+    @else
+        @if(Auth::user()->role == 'Admin')
+        <div class="property-btn text-center">
+          <span><a href="#"><i class='fa fa-plus'></i>Image</a></span>
+          <span><a href="#"><i class='fa fa-edit'></i>Edit</a></span>
+       </div>
+        @endif
+     @endguest
 
     </div>
     <div class="col-md-6 col-xs-12">
       <div class="property-details">
-       <div class="title"><h4>3 Bed Apertment</h4></div>
+       <div class="title"><h4>{{$property->title}}</h4></div>
        <hr>
        <div class="content">
-         <p>All 431 apartments feature open living spaces with abundant closets, over sized windows, marble bathrooms, and open kitchens with stainless steel appliances, including dishwasher, microwave, and full-size fridge & freezer. Many units also have private outdoor space.
-
-The building offers a superb amenity package th...at includes a round the clock doorman, concierge, brand new tenants lounge, children?s game room & 12,000 sq. ft. landscaped roof deck.</p>
+         <p>{{$property->details}}</p>
        </div>
       </div>
     </div>

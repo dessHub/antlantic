@@ -37,31 +37,32 @@
     <div class="properties">
       <div></div>
       <p style="color:blue; margin-top:20px; padding-left:20px;">Search Reasults<i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-right"></i></p>
+     @foreach($properties as $key)
       <div class="col-md-4 col-xs-12">
         <div class="item-front">
         <div class="front-img">
-         <span style="">Cottage</span>
-         <img class="img-responsive " src="/images/pic1.jpg" alt="">
+         <span style="">{{ $key->category}}</span>
+         <img class="img-responsive " src="https://s3.eu-west-1.amazonaws.com/nzuri{{$key->image}}" width="100%" height="100%" alt="">
        </div>
          <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-         <h4><strong>3 Bed Apertment</strong></h4>
-         <h6>KES. 70,000</h6>
+         <h4><strong>{{ $key->title}}</strong></h4>
+         <h6>KES. {{ $key->price}}</h6>
          <div class="item-bottom">
-          <span><i class="fa fa-bed"></i>3</span>
-          <span><i class="fa fa-car"></i>2</span>
-          <span><i class="fa fa-shower"></i>1</span>
+          <span><i class="fa fa-bed"></i>{{ $key->bed}}</span>
+          <span><i class="fa fa-car"></i>{{ $key->parking}}</span>
+          <span><i class="fa fa-shower"></i>{{ $key->bath}}</span>
          </div>
-         <p>5th street</p>
+         <p>{{ $key->street}}</p>
          <div class="" style="margin-bottom: 15px;">
-         <span>Nyali</span>
-         <span class="pull-right" style="margin-bottom:15px;"><a href="{{ route('homes.show',1)}}"><button class="btn btn-success">View</button></a></span>
+         <span>{{ $key->location}}</span>
+         <span class="pull-right" style="margin-bottom:15px;"><a href="{{ route('homes.show', $key->id)}}"><button class="btn btn-success">View</button></a></span>
        </div>
        </div>
-
-
         </div>
 
       </div>
+      @endforeach
+
         <div class="col-md-4 col-xs-12">
           <div class="item-front">
           <div class="front-img">
