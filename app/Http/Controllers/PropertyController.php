@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Property;
+use App\Callery;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -107,7 +108,8 @@ class PropertyController extends Controller
     public function show($id)
     {
         $property = Property::find($id);
-        return view('properties.property', compact('property'));
+        $callery = Callery::where('property_id', $id)->get();
+        return view('properties.property', compact('property', 'callery'));
     }
 
     /**

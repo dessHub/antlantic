@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('homes', 'PropertyController');
+Route::resource('callery', 'CalleryController');
 
 Auth::routes();
 

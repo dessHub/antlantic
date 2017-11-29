@@ -58,6 +58,11 @@ body {
 .item-front {
   background-color: black;
   margin-bottom: 10px;
+  .front-img {
+   img {
+     height: 35vh;
+   }
+  }
   .item-cont {
     background-color: white;
   }
@@ -180,6 +185,12 @@ body {
  .page-header {
    padding-top: 20px;
    margin: 10px auto;
+ }
+ .col-md-4 {
+     img {
+
+         height : 20vh;
+     }
  }
 }
 

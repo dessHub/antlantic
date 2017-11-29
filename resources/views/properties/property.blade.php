@@ -19,7 +19,7 @@
     @else
         @if(Auth::user()->role == 'Admin')
         <div class="property-btn text-center">
-          <span><a href="#"><i class='fa fa-plus'></i>Image</a></span>
+          <span><a href="{{ route('callery.show', $property->id) }}"><i class='fa fa-plus'></i>Image</a></span>
           <span><a href="#"><i class='fa fa-edit'></i>Edit</a></span>
        </div>
         @endif
@@ -38,15 +38,11 @@
     <div class="col-md-12 col-xs-12">
       <div class="callery">
         <div class="page-header"><h3>Callery</h3></div>
+       @foreach($callery as $key )
         <div class="col-md-4 col-xs-12">
-         <img class="img-responsive thumbnail" src="/images/pic3.jpg">
+          <img class="img-responsive thumbnail" src="https://s3.eu-west-1.amazonaws.com/nzuri{{$key->image}}" alt="Property Image">
        </div>
-       <div class="col-md-4 col-xs-12">
-        <img class="img-responsive thumbnail" src="/images/pic3.jpg">
-      </div>
-      <div class="col-md-4 col-xs-12">
-       <img class="img-responsive thumbnail" src="/images/pic3.jpg">
-     </div>
+       @endforeach
    </div>
   </div>
   </div>

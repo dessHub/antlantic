@@ -56,11 +56,11 @@ return [
         ],
 
         's3' => [
-            'driver' => 's3',
-            'key' => 'AKIAIBE33SYHZ2F5U2EQ',
-            'secret' => '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',
-            'region' => 'eu-west-1',
-            'bucket' => 'nzuri',
+            'driver' => env('S3_DRIVER', 's3'),
+            'key' => env('S3_KEY'),
+            'secret' => env('S3_SECRET'),
+            'region' =>env('S3_REGION'),
+            'bucket' => env('S3_BUCKET'),
         ],
 
     ],
