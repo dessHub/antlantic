@@ -54,133 +54,45 @@
   <div class="col-md-12 col-xs-12 flex-row">
     <div class="col-md-8 col-xs-12"><h3>Featured Properties</h3></div>
     <div class="col-md-4 col-xs-12"><h5><a href="#"></a></h5></div>
-    <div class="col-md-4 col-xs-12">
-      <div class="item-front">
-      <div class="front-img">
-       <span style="">Cottage</span>
-       <img class="img-responsive " src="/images/pic1.jpg" alt="">
-     </div>
-       <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-       <h4><strong>3 Bed Apertment</strong></h4>
-       <h6>KES. 70,000</h6>
-       <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-     </div>
-       <div class="item-bottom">
-        <span><i class="fa fa-bed"></i>3</span>
-        <span><i class="fa fa-car"></i>2</span>
-        <span><i class="fa fa-shower"></i>1</span>
+   
+      @foreach($properties as $key )
+      <div class="col-md-4 col-xs-12">
+        <div class="item-front">
+
+        <div class="front-img">
+         <span style="">{{ $key->category }}</span>
+
+         <img class="img-responsive " src="https://s3.eu-west-1.amazonaws.com/nzuri{{$key->image}}" width="100%" height="100%" alt="">
+       </div>
+
+         <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
+         <h4><strong>{{ $key->title }}</strong></h4>
+         <h6>KES. {{ $key->price }}</h6>
+         <div class="item-bottom"> 
+          <span><i class="fa fa-bed"></i>3</span>
+          <span><i class="fa fa-car"></i>2</span>
+          <span><i class="fa fa-shower"></i>1</span>
+         </div> 
+
+       <p>{{ $key->street }}</p>
+       <div class="" style="margin-bottom: 15px;">
+       <span>{{ $key->location}}</span>
+       <span class="pull-right" style="margin-bottom:15px;"><a href="{{ route('homes.show', $key->id)}}"><button class="btn btn-success">View</button></a></span>   
        </div>
 
       </div>
 
     </div>
-      <div class="col-md-4 col-xs-12">
-        <div class="item-front">
-        <div class="front-img">
-         <span style="">Apertments</span>
+</div
+</div>
 
-         <img class="img-responsive " src="/images/pic3.jpg" alt="">
-       </div>
-         <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-         <h4><strong>3 Bed Apertment</strong></h4>
-         <h6>KES. 70,000</h6>
-         <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-       </div>
-         <div class="item-bottom">
-          <span><i class="fa fa-bed"></i>3</span>
-          <span><i class="fa fa-car"></i>2</span>
-          <span><i class="fa fa-shower"></i>1</span>
-         </div>
+      @endforeach
+        
 
-        </div>
-
-      </div>
-      <div class="col-md-4 col-xs-12">
-        <div class="item-front">
-        <div class="front-img">
-         <span style="">Cottage</span>
-
-         <img class="img-responsive " src="/images/pic1.jpg" alt="">
-       </div>
-         <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-         <h4><strong>3 Bed Apertment</strong></h4>
-         <h6>KES. 70,000</h6>
-         <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-       </div>
-         <div class="item-bottom">
-          <span><i class="fa fa-bed"></i>3</span>
-          <span><i class="fa fa-car"></i>2</span>
-          <span><i class="fa fa-shower"></i>1</span>
-         </div>
-
-        </div>
-
-      </div>
-        <div class="col-md-4 col-xs-12">
-          <div class="item-front">
-          <div class="front-img">
-           <span style="">Apertments</span>
-
-           <img class="img-responsive " src="/images/pic3.jpg" alt="">
-         </div>
-           <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-           <h4><strong>3 Bed Apertment</strong></h4>
-           <h6>KES. 70,000</h6>
-           <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-         </div>
-           <div class="item-bottom">
-            <span><i class="fa fa-bed"></i>3</span>
-            <span><i class="fa fa-car"></i>2</span>
-            <span><i class="fa fa-shower"></i>1</span>
-           </div>
-
-          </div>
-
-        </div>
-        <div class="col-md-4 col-xs-12">
-          <div class="item-front">
-          <div class="front-img">
-           <span style="">Cottage</span>
-
-           <img class="img-responsive " src="/images/pic1.jpg" alt="">
-         </div>
-           <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-           <h4><strong>3 Bed Apertment</strong></h4>
-           <h6>KES. 70,000</h6>
-           <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-         </div>
-           <div class="item-bottom">
-            <span><i class="fa fa-bed"></i>3</span>
-            <span><i class="fa fa-car"></i>2</span>
-            <span><i class="fa fa-shower"></i>1</span>
-           </div>
-
-          </div>
-
-        </div>
-        <div class="col-md-4 col-xs-12">
-          <div class="item-front">
-          <div class="front-img">
-           <span style="">Apertments</span>
-
-           <img class="img-responsive " src="/images/pic3.jpg" alt="">
-         </div>
-           <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
-           <h4><strong>3 Bed Apertment</strong></h4>
-           <h6>KES. 70,000</h6>
-           <p>5 bedroom mansion is on sale at prime area of Nyali off links road. The house consists of spacious ..more.</p>
-         </div>
-           <div class="item-bottom">
-            <span><i class="fa fa-bed"></i>3</span>
-            <span><i class="fa fa-car"></i>2</span>
-            <span><i class="fa fa-shower"></i>1</span>
-           </div>
-
-          </div>
-
-        </div>
   </div>
 </div>
+  {{ $properties->links() }}
+
 </div>
 
 

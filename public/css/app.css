@@ -8525,6 +8525,7 @@ body {
 
 .callery .col-md-4 img {
   height: 20vh;
+  width: 100%;
 }
 
 .property-contact {
@@ -8543,5 +8544,15 @@ body {
 
 .property-form .col-md-12 {
   margin: 5px;
+}
+
+.add-callery {
+  background-color: #fff;
+}
+
+.users-table {
+  border-style: ridge;
+  background-color: #fff;
+  padding: 10px;
 }
 

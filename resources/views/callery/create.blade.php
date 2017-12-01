@@ -4,7 +4,13 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 col-xs-12">
+
+    @if($message = Session::get('success'))
+     <div class="alert alert-success">
+     <p>{{ $message }}</p>
+     </div>
+   @endif
+    <div class="col-md-offset-2 col-md-8 col-xs-12">
      <div class="add-callery">
        <form class="form-horizontal" method="post" action="{{ route('callery.store') }}" enctype="multipart/form-data">
        {{ csrf_field()}}

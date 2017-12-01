@@ -20,8 +20,14 @@
         @if(Auth::user()->role == 'Admin')
         <div class="property-btn text-center">
           <span><a href="{{ route('callery.show', $property->id) }}"><i class='fa fa-plus'></i>Image</a></span>
-          <span><a href="#"><i class='fa fa-edit'></i>Edit</a></span>
-       </div>
+          <span><a href="{{ route('homes.edit', $property->id) }}"><i class='fa fa-edit'></i>Edit</a></span>
+          <span>
+            <form action="{{ route('homes.destroy', $property->id) }}" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit"><i class="fa fa-remove"></i></button>
+            </form>
+         </span>
+        </div>
         @endif
      @endguest
 

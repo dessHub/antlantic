@@ -31,7 +31,7 @@
           <div class="top">
           <div class="top-title"><i class="fa fa-envelope"></i>info@atlantichomes.com</div>
         </div>
-        </div>
+        )</div>
       </div>
     </div>
 
@@ -100,7 +100,10 @@
                                 <li><a href="{{ route('register') }}">Register</a></li>
                                 </ul>
                             </li>
-                        @else
+                            @else
+                                @if(Auth::user()->role == "Admin")
+                            <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i> Users </a></li>
+                                @endif
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>

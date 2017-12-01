@@ -120,19 +120,43 @@ class PropertyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $property = Property::find($id);
+        return view('properties.edit', compact('property'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * 4@param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        request()->validate([
+            'title' => 'required',
+            'category' => 'required',
+        ]);
+        
+       $title =  Input::get('title');
+       $category = Input::get('category');
+       $type = Input::get('type');
+       $bed = Input::get('bed');
+       $bath = Input::get('bath');
+       $parking = Input::get('parking');
+       $price = Input::get('price');
+       $location = Input::get('location');
+       $street = Input::get('street');
+       $details = Input::get('details');
+
+       $prop_obj = new Property();
+       $prop_obj->id = $id;
+       $prop = Property::find($prop_obj->id);
+       $prop->update(['title' => $title, 'category' => $category, 'bath' => $bath, 'bed' => $bed, 'bath' => $bath, 'parking' => $parking, 'price' => $price, 'location' => $location, 'street' => $street, 'details' => $details]);
+
+
+       return redirect()->route('homes.show', $id)
+            ->with('success', 'Property successfully Updated');
     }
 
     /**
@@ -143,6 +167,9 @@ class PropertyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Property::destroy($id);
+
+        return redirect()->route('homes.index')
+            ->with('succes', 'Deleted successfully');
     }
 }

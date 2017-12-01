@@ -122,6 +122,12 @@ class CalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Callery::destroy($id);
+        $prop = Callery::find($id);
+        $prop_id = $prop->property_id;
+        echo($prop_id);
+
+        return redirect()->route('callery.show', $prop_id)
+            ->with('success', "Deleted Successfully");
     }
 }
