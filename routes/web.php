@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::resource('homes', 'PropertyController');
 Route::resource('callery', 'CalleryController');
+Route::resource('mail', 'MailController');
 
 Auth::routes();
 

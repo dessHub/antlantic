@@ -19,12 +19,12 @@
     @else
         @if(Auth::user()->role == 'Admin')
         <div class="property-btn text-center">
-          <span><a href="{{ route('callery.show', $property->id) }}"><i class='fa fa-plus'></i>Image</a></span>
-          <span><a href="{{ route('homes.edit', $property->id) }}"><i class='fa fa-edit'></i>Edit</a></span>
+          <span><a href="{{ route('callery.show', $property->id) }}"><button class="btn btn-default"><i class='fa fa-plus'></i>Image</button></a></span>
+          <span><a href="{{ route('homes.edit', $property->id) }}"><button class="btn btn-default"><i class='fa fa-edit'></i>Edit</button></a></span>
           <span>
-            <form action="{{ route('homes.destroy', $property->id) }}" method="POST">
-              <input type="hidden" name="_method" value="DELETE">
-              <button type="submit"><i class="fa fa-remove"></i></button>
+            {!! Form::open(['method' => 'DELETE', 'route' => ['homes.destroy', $property->id], 'style'=>'display:inline']) !!}
+            {!! Form::submit('Delete', ['class' => 'btn btn-danger' ]) !!}
+            {!! Form::close() !!}
             </form>
          </span>
         </div>
@@ -56,7 +56,7 @@
   <div class="col-md-4 col-xs-12" style="margin-top:-3px;">
    <div class="page-header"><h3>Leave a Message</h3></div>
    <div class="property-contact">
-       <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+       <form class="form-horizontal" method="POST" action="{{ route('mail.store') }}">
            {{ csrf_field() }}
 
            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -64,6 +64,8 @@
 
                <div class="col-md-12">
                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                   <input id="id" type="hidden" class="form-control" name="id" value="{{ $property->id }}" >
+                   <input id="code" type="hidden" class="form-control" name="code" value="{{ $property->code }}">
 
                    @if ($errors->has('name'))
                        <span class="help-block">
