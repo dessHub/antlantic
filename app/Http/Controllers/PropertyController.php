@@ -24,6 +24,34 @@ class PropertyController extends Controller
         return view('properties.index', compact('properties'));
     }
 
+    public function apartment($type)
+    {
+        $cat = 'Apartment';
+        $properties = Property::where('category', $cat)->where('type', $type)->get();
+            return view('properties.index', compact('properties'));
+       
+    }
+
+    public function cottage($type)
+    {
+        $cat = 'Cottage';
+        $properties = Property::where('category', $cat)->where('type', $type)->get();
+        return view('properties.index', compact('properties'));
+    }
+
+    public function search()
+    {
+       $cat = Input::get('category');
+       $loc = Input::get('location');
+
+       if($loc == 'All'){
+           $properties =  Property::where('category', $cat)->get();
+       } else {
+           $properties = Property::where('category', $cat)->where('location', $loc)->get();
+       }
+       return view('properties.index', compact('properties'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -137,7 +165,7 @@ class PropertyController extends Controller
             'title' => 'required',
             'category' => 'required',
         ]);
-        
+
        $title =  Input::get('title');
        $category = Input::get('category');
        $type = Input::get('type');

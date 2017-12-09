@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::resource('homes', 'PropertyController');
 Route::resource('callery', 'CalleryController');
 Route::resource('mail', 'MailController');
+Route::get('/homes/Apartment/{type}', 'PropertyController@apartment');
+Route::get('/homes/Cottage/{type}', 'PropertyController@cottage');
+Route::post('/homes/search', 'PropertyController@search');
 
 Auth::routes();
 

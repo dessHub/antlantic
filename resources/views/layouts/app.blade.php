@@ -69,8 +69,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu sub-menu">
-                                <li><a href="{{ route('homes.index') }}" >HOMES FOR SALE</a></li>
-                                <li><a href="{{ route('homes.index') }}">HPMES FOR RENT</a></li>
+                                <li><a href="{{ url('homes/Apartment/'. 'Sale') }}" >HOMES FOR SALE</a></li>
+                                <li><a href="{{ url('homes/Apartment/'. 'Rent') }}">HOMES FOR RENT</a></li>
                                 @guest
                                 @else
                                     @if( Auth::user()->role == "Admin")
@@ -85,8 +85,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu sub-menu">
-                                <li><a href="{{ route('login') }}" >COTTAGES FOR SALE</a></li>
-                                <li><a href="{{ route('register') }}">COTTAGES FOR RENT</a></li>
+                                <li><a href="{{ url('/homes/Cottage/'. 'Sale') }}" >COTTAGES FOR SALE</a></li>
+                                <li><a href="{{ url('/homes/Cottage/'. 'Rent') }}">COTTAGES FOR RENT</a></li>
                                 </ul>
                             </li>
                         @guest
@@ -102,6 +102,7 @@
                             </li>
                             @else
                                 @if(Auth::user()->role == "Admin")
+                            <li><a href="{{ route('homes.create') }}"><i class="fa fa-plus"></i>PROPERY</a></li>
                             <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i> Users </a></li>
                                 @endif
                             <li class="dropdown">

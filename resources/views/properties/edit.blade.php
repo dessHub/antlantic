@@ -27,8 +27,8 @@
          <div class="col-md-6 col-xs-12" style="margin-right : 0px; " >
                  <select class="form-control " id="category" name="category" required="true" value="{{ $property->category }}" style="background-color : white;">
                    <option  value="{{ $property->category }} ">{{ $property->category }}</option>
-                   <option  value="Apartment/Houses">Apartment/Houses</option>
-                   <option  value="Cottages/Holidays">Cottages/Holidays</option>
+                   <option  value="Apartment">Apartment/Houses</option>
+                   <option  value="Cottages">Cottages/Holidays</option>
                  </select>
          </div>
          <div class="hidden-md hidden-lg col-xs-12"></div>
