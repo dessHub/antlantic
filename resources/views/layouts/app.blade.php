@@ -102,6 +102,7 @@
                             </li>
                             @else
                                 @if(Auth::user()->role == "Admin")
+                            <li><a href="{{ route('mail.index') }}"><i class="fa fa-envelop"></i>Mails</a></li>
                             <li><a href="{{ route('homes.create') }}"><i class="fa fa-plus"></i>PROPERY</a></li>
                             <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i> Users </a></li>
                                 @endif

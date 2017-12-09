@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Mail;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
-use Storage;
+
 
 class MailController extends Controller
 {
@@ -18,7 +18,8 @@ class MailController extends Controller
      */
     public function index()
     {
-        //
+        $mails = Mail::get();
+        return view('mails.index', compact('mails'));
     }
 
     /**
@@ -45,8 +46,7 @@ class MailController extends Controller
             'message' => 'required|max:600',
         );
 
-        $id = Input::get('id');
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make(make(Input::all(), $rules));
 
         // Check if validator failed----
         if ($validator->fails()) {
@@ -61,14 +61,10 @@ class MailController extends Controller
         } else {
             // validation successful ----
 
-            $mail = new Mail;
-            $mail->name = Input::get('name');
-            $mail->phone = Input::get('phone');
-            $mail->code = Input::get('code');
-            $mail->email = Input::get('email');
-            $mail->message = Input::get('message');
-            
-            $mail->save();
+
+            $email = Input::get('email');
+            $message = Input::get('message');
+
            
             return redirect()->route('homes.show', $id);
         }
