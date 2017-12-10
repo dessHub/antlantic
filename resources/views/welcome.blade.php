@@ -83,7 +83,7 @@
          <img class="img-responsive " src="https://s3.eu-west-1.amazonaws.com/nzuri{{$key->image}}" width="100%" height="100%" alt="">
        </div>
 
-         <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:2px;">
+         <div class="item-cont" style="padding-top:5px; padding-left:10px; padding-right: 10px; padding-bottom:15px;">
          <h4><strong>{{ $key->title }}</strong></h4>
          <h6>KES. {{ $key->price }}</h6>
          <div class="item-bottom">

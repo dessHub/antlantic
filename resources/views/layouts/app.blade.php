@@ -29,7 +29,7 @@
 
         <div class="col-md-12">
           <div class="top">
-          <div class="top-title"><i class="fa fa-envelope"></i>info@atlantichomes.com</div>
+          <div class="top-title"><i class="fa fa-envelope"></i>info@atlantichomez.com</div>
         </div>
         )</div>
       </div>
@@ -48,8 +48,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbarbrand" href="{{ url('/') }}">
+                       <img src='/images/logo.png' class="">
                     </a>
                 </div>
 
@@ -60,8 +60,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                    <ul class="nav navbar-nav navbar-right"> <!-- Authentication Links -->
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
